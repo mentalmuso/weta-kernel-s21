@@ -54,8 +54,13 @@ extern unsigned long get_max_fps_util(int group_id);
  *
  * (default: 6ms * (1 + ilog(ncpus)), units: nanoseconds)
  */
-unsigned int sysctl_sched_latency			= 6000000ULL;
-static unsigned int normalized_sysctl_sched_latency	= 6000000ULL;
+unsigned int sysctl_sched_latency			= 5000000ULL;
+static unsigned int normalized_sysctl_sched_latency	= 5000000ULL;
+
+/*
+ * Enable/disable honoring sync flag in energy-aware wakeups.
+ */
+unsigned int sysctl_sched_sync_hint_enable = 1;
 
 #ifdef CONFIG_SEC_PERF_MANAGER
 DEFINE_PER_CPU(unsigned long, fps_boosted_util);
