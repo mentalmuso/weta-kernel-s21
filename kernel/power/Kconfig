@@ -324,9 +324,16 @@ config ENERGY_MODEL
 
 	  If in doubt, say N.
 
+<<<<<<< HEAD
 config FOTA_LIMIT
 	bool "Fota limit information node"
 	default n
 	help
 	  Add sysfs to notify limit information to recovery module
 	  /sys/power/fota_limit
+=======
+config	BOEFFLA_WL_BLOCKER
+		bool "Boeffla generic wakelock blocker driver"
+		depends on PM
+		default y
+>>>>>>> e96fc50e914b... boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0
