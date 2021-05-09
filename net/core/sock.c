@@ -138,13 +138,14 @@
 
 #include <net/tcp.h>
 #include <net/busy_poll.h>
-
+#ifdef CONFIG_KNOX_NCM
 // SEC_PRODUCT_FEATURE_KNOX_SUPPORT_NPA {
 #ifdef CONFIG_KNOX_NCM
 #include <linux/pid.h>
 #include <net/ncm.h>
 #endif
 // SEC_PRODUCT_FEATURE_KNOX_SUPPORT_NPA }
+#endif
 
 static DEFINE_MUTEX(proto_list_mutex);
 static LIST_HEAD(proto_list);

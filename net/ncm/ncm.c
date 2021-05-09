@@ -17,6 +17,7 @@
  */
 
 // SEC_PRODUCT_FEATURE_KNOX_SUPPORT_NPA {
+#ifdef CONFIG_KNOX_NCM
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/netfilter.h>
@@ -1015,4 +1016,5 @@ module_exit(ncm_exit)
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Network Context Metadata Module:");
+#endif
 // SEC_PRODUCT_FEATURE_KNOX_SUPPORT_NPA }
