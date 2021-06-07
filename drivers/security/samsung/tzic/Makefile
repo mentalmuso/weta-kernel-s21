@@ -7,7 +7,7 @@ MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
 
 ifeq ($(CONFIG_ARCH_LAHAINA),y)
   ifeq ($(CONFIG_QGKI), y)
-    obj-m += tzic_driver.o
+    obj-y += tzic_driver.o
   endif
 else
   obj-$(CONFIG_TZIC) += tzic_driver.o
