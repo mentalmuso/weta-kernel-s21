@@ -172,11 +172,12 @@ obj-$(CONFIG_DRM_FBDEV_EMULATION) += msm_fbdev.o
 
 msm_drm-$(CONFIG_DISPLAY_SAMSUNG) += samsung/PBA_BOOTING/ss_dsi_panel_PBA_BOOTING_fhd.o
 
-msm_drm-$(CONFIG_PANEL_S6E3HAB_AMB677TY01_WQHD) += samsung/S6E3HAB_AMB677TY01/ss_dsi_interpolation_S6E3HAB_AMB677TY01.o \
-	samsung/S6E3HAB_AMB677TY01/ss_dsi_panel_S6E3HAB_AMB677TY01.o \
-	samsung/S6E3HAB_AMB677TY01/ss_dsi_smart_dimming_S6E3HAB_AMB677TY01.o
+msm_drm-$(CONFIG_PANEL_S6E3HAB_AMB623TS01_WQHD) += samsung/S6E3HAB_AMB623TS01/ss_dsi_interpolation_S6E3HAB_AMB623TS01.o \
+	samsung/S6E3HAB_AMB623TS01/ss_dsi_panel_S6E3HAB_AMB623TS01.o \
+	samsung/S6E3HAB_AMB623TS01/ss_dsi_smart_dimming_S6E3HAB_AMB623TS01.o
 
-msm_drm-$(CONFIG_PANEL_S6E3HAD_AMB681XV01_WQHD) += samsung/S6E3HAD_AMB681XV01/ss_dsi_panel_S6E3HAD_AMB681XV01.o
+
+msm_drm-$(CONFIG_PANEL_S6E3FAB_AMB624XT01_FHD) += samsung/S6E3FAB_AMB624XT01/ss_dsi_panel_S6E3FAB_AMB624XT01.o
 
 msm_drm-$(CONFIG_DISPLAY_SAMSUNG) += samsung/ss_dsi_panel_sysfs.o \
 	samsung/ss_dsi_panel_debug.o \
