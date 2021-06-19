@@ -1,18 +1,18 @@
-config SEC_P3Q_PROJECT
+config SEC_T2Q_PROJECT
 	default n
-	bool "Samsung P3Q Project"
+	bool "Samsung T2Q Project"
 	help
-	  Support for Samsung P3Q Project
+	  Support for Samsung T2Q Project
 
-config MACH_P3Q_USA_SINGLEW
+config MACH_T2Q_USA_SINGLEW
 	default n
-	bool "Samsung P3Q USA SINGLEW"
+	bool "Samsung T2Q USA SINGLEW"
 	help
-	  Support for Samsung P3Q USA SINGLEW device.
+	  Support for Samsung T2Q USA SINGLEW device.
 
-config MACH_P3Q_USA_OPENW
+config MACH_T2Q_USA_OPENW
         default n
-        bool "Samsung P3Q USA OPENW"
+        bool "Samsung T2Q USA OPENW"
         help
-          Support for Samsung P3Q USA OPENW device.
+          Support for Samsung T2Q USA OPENW device.
 
