@@ -3,15 +3,15 @@
 #
 
 # Features to Enable
-PED_ENABLE=true
-SAFEPLACE_ENABLE=true
-IMMUTABLE_ENABLE=true
-LP_ENABLE=true
-UMH_RESTRICTION_ENABLE=true
+PED_ENABLE=false
+SAFEPLACE_ENABLE=false
+IMMUTABLE_ENABLE=false
+LP_ENABLE=false
+UMH_RESTRICTION_ENABLE=false
 
 ifneq ($(wildcard $(srctree)/include/crypto/internal/rsa.h),)
-    $(warning [DEFEX] INTEGRITY_ENABLE)
-    INTEGRITY_ENABLE=true
+#    $(warning [DEFEX] INTEGRITY_ENABLE)
+    INTEGRITY_ENABLE=false
 endif
 
 # caches to enable
