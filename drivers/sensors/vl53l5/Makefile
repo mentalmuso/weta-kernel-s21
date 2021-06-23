@@ -55,7 +55,7 @@ GPIO_INTERRUPT := -1
 endif
 
 # Set to TRUE to enable logging functions.
-LOG_ENABLE = TRUE
+LOG_ENABLE = FALSE
 
 ifeq "$(LOG_ENABLE)" "TRUE"
   $(warning LOG_ENABLE=$(LOG_ENABLE))
@@ -82,12 +82,12 @@ ccflags-y += -DVL53L5_WORKER
 endif
 
 ifeq "$(BUILD_TYPE)" "DEBUG"
-  $(warning BUILD_TYPE=$(BUILD_TYPE))
+#  $(warning BUILD_TYPE=$(BUILD_TYPE))
   ccflags-y += -DDEBUG
 endif
 
 ifeq "$(BUILD_TYPE)" "RELEASE"
-  $(warning BUILD_TYPE=$(BUILD_TYPE))
+#  $(warning BUILD_TYPE=$(BUILD_TYPE))
 endif
 
 ifeq "$(LOG_ENABLE)" "TRUE"
@@ -103,7 +103,7 @@ endif
 
 
 ifeq "$(PSEUDO_SINGLE_ZONE)" "TRUE"
-  $(warning PSEUDO_SINGLE_ZONE=$(PSEUDO_SINGLE_ZONE))
+#  $(warning PSEUDO_SINGLE_ZONE=$(PSEUDO_SINGLE_ZONE))
   ccflags-y += -DSTM_VL53L5_SUPPORT_PSEUDO_SINGLE_ZONE
 endif
 
