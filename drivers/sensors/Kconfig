@@ -199,9 +199,6 @@ config SENSORS_A96T365IF
 	bool "Choose A96T365IF"
 	default n
 	help
-	  If you say yes here if you use A96T365IF for grip.
-	  This option enables grip sensors using
-	  IMAGIS A96T365IF device driver for grip.
 
 config SENSORS_ISG5320A
 	depends on I2C
