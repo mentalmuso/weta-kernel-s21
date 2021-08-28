@@ -2067,10 +2067,11 @@ ssize_t sec_bat_store_attrs(
 		break;
 	case BATT_SLATE_MODE:
 		if (sscanf(buf, "%10d\n", &x) == 1) {
-			if (x == is_slate_mode(battery)) {
+			if (x == 2) {
+				sec_bat_set_current_event(battery, SEC_BAT_CURRENT_EVENT_SLATE, SEC_BAT_CURRENT_EVENT_SLATE);
+				sec_vote(battery->chgen_vote, VOTER_SMART_SLATE, true, SEC_BAT_CHG_MODE_BUCK_OFF);
 				dev_info(battery->dev,
-					 "%s : skip same slate mode : %d\n", __func__, x);
-				return count;
+					"%s: enable smart switch slate mode : %d\n", __func__, x);
 			} else if (x == 1) {
 				sec_bat_set_current_event(battery, SEC_BAT_CURRENT_EVENT_SLATE, SEC_BAT_CURRENT_EVENT_SLATE);
 				sec_vote(battery->chgen_vote, VOTER_SLATE, true, SEC_BAT_CHG_MODE_BUCK_OFF);
@@ -2079,6 +2080,7 @@ ssize_t sec_bat_store_attrs(
 			} else if (x == 0) {
 				sec_bat_set_current_event(battery, 0, SEC_BAT_CURRENT_EVENT_SLATE);
 				sec_vote(battery->chgen_vote, VOTER_SLATE, false, 0);
+				sec_vote(battery->chgen_vote, VOTER_SMART_SLATE, false, 0);
 				dev_info(battery->dev,
 					"%s: disable slate mode : %d\n", __func__, x);
 			} else {
